@@ -1,39 +1,33 @@
 str = \
 """
-0000000
-1111110
-2222220
-0012120
-1120200
-2201010
-0102211
-1210021
-2021101
-0220111
-1001221
-2112001
-0121022
-1202102
-2010212
-0211202
-1022012
-2100122
+0000
+0112
+0221
+1011
+1120
+1202
+2022
+2101
+2210
 """
 
 ret = ""
 
 levels = [
-	["Prum", "Sherlock", "SAPELI"],
-	["YTONG", "Betong", "YTONG"],
-	["50 cm", "60 cm", "70 cm"],
-	["silikónová", "akrylátová", "silikónová"],
-	["ano", "ne", "ano"]
+	["CZ", "SK", "RU"],
+	["muz", "zena", "muz"],
+	["student", "produkcni", "duchodce"],
+	["garsonka", "rodinny dům", "kolej"],
 ]
 
+# Pro kazdou radku v ort. ctverci
 for line in iter(str.splitlines()):
+	# Pro kazdy charakter radku
 	for i, char in enumerate(line):
 		if i < len(levels):
+			# Vypis prislusnou hodnotu faktoru
 			ret += levels[i][int(char)]
+			# Kvuli vypisu do LaTexu
 			ret += " & " if i < len(levels) - 1 else " \\\\ "
 	ret += "\n"
 

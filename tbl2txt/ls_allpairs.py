@@ -3,12 +3,10 @@ import metacomm.combinatorics.all_pairs2
 all_pairs = metacomm.combinatorics.all_pairs2.all_pairs2
 
 levels = [
-	["CZ", "UK", "US"],
+	["CZ", "UK", "RU"],
 	["muz", "zena"],
-	["student/ka", "technik", "duchodce/kyne"],
-	["svobodbny/a", "rozvedeny/a"],
-	["venkov", "mesto"],
-	["garsonka", "chata", "kolej"]
+	["student", "produkcni", "duchodce"],
+	["garsonka", "rodinny dum", "kolej"]
 ]
 
 pairwise = all_pairs( levels )
